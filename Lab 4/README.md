@@ -23,3 +23,9 @@
 - Modal windows (modal windows): Add modal windows to display more details about your work or to view it full size.
 
 ### [Deploying to Vercel](https://vercel.com/docs/deployments/overview#)
+
+### Template
+
+<img width="700" alt="SCR-20240216-ipkf" src="https://github.com/khlebobul/S24-CTO-Toolkit-MSTE/assets/77191581/ef436b85-89f9-408b-8916-8654aa46eec9">
+<img width="700" alt="SCR-20240216-iplg" src="https://github.com/khlebobul/S24-CTO-Toolkit-MSTE/assets/77191581/87c5e892-7274-4d8c-9bd6-c061a199fd7d">
+
