@@ -1,0 +1,19 @@
+.carousel {
+    display: flex;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* For iOS */
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+    -ms-overflow-style: none; /* Hide scrollbar in IE and Edge */
+}
+.carousel::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Safari, and Opera */
+}
+.project {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    margin-right: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 400px;
+}
