@@ -1,6 +1,6 @@
 # Lab 5 | SQL Basics 
 
-Filtering is required to unload data not entirely, but only under certain conditions.
+### Filtering is required to unload data not entirely, but only under certain conditions.
 
 To display specific fields, they need to be listed after `SELECT` separated by commas.
 
@@ -126,3 +126,61 @@ Monday is 1, Sunday is
 - `QUARTER` — quarter;
 - `YEAR` — year;
 - `CENTURY` — century.
+
+Aggregating functions are used to perform operations on the data contained in a field.
+
+Copy the SQL code
+
+```sql
+SELECT
+COUNT(*),-- returns the number of records in the tableCOUNT(column),-- returns the number of records in the column fieldCOUNT(DISTINCT column),
+/* returns the number of unique values
+in the column field */SUM(column),-- sum of values in the fieldAVG(column),-- average of values in the fieldMIN(column),-- minimum of values in the fieldMAX(column)-- maximum of values in the fieldFROM table;
+
+```
+
+### Grouping is used to calculate aggregations for a field based on parameters represented in other fields.
+
+Copy the SQL code
+
+```sql
+-- grouping dataSELECT field_1,
+       field_2,
+       field_3,
+       AGGREGATE_FUNCTION(field)
+FROM table
+GROUP BY field_1,
+         field_2,
+         field_3;
+-- IMPORTANT! The number of non-aggregated fields in SELECT should be the same as in GROUP BY
+
+```
+
+Data in tables can be sorted. Numerical data and dates are sorted in descending and ascending order, while strings are sorted in alphabetical order and vice versa.
+
+Copy the SQL code
+
+```sql
+-- sorting dataSELECT field_1,
+       field_2,
+       field_3,
+       AGGREGATE_FUNCTION(field)
+FROM table
+ORDER BY field_1,-- sorting in ascending order
+         field_2 DESC,-- sorting in descending order
+         field_3 ASC;-- sorting in ascending order
+
+```
+
+The `HAVING` operator is an analogue of `WHERE`, which is used to filter data after grouping and aggregation.
+
+Copy the SQL code
+
+```sql
+-- filtering after groupingSELECT field_1, field_2, field_3, AGGREGATE_FUNCTION(field)
+FROM table
+GROUP BY field_1
+HAVING AGGREGATE_FUNCTION(field) > n;
+*- IMPORTANT! WHERE only works with original data, - HAVING — only with aggregated*`
+
+```
